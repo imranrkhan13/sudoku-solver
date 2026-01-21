@@ -1,0 +1,202 @@
+/* ===========================
+   DEFAULT THEME VARIABLES
+=========================== */
+:root {
+    --bg: #0f172a;
+    --card: #020617;
+    --grid: #334155;
+    --grid-bold: #64748b;
+    --cell-bg: #020617;
+    --text: #ffffff;
+    --fixed: #38bdf8;
+    --error: #7f1d1d;
+    --btn: #38bdf8;
+    --btn-text: #020617;
+}
+
+/* ===========================
+   PAGE LAYOUT
+=========================== */
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    background: var(--card);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .6);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* ===========================
+   THEME SELECT
+=========================== */
+.theme-bar {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+/* ===========================
+   SUDOKU GRID
+=========================== */
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    border: 1px solid var(--grid);
+}
+
+td:nth-child(3),
+td:nth-child(6) {
+    border-right: 3px solid var(--grid-bold);
+}
+
+tr:nth-child(3) td,
+tr:nth-child(6) td {
+    border-bottom: 3px solid var(--grid-bold);
+}
+
+/* ===========================
+   CELLS
+=========================== */
+input {
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    font-size: 22px;
+    background: var(--cell-bg);
+    color: var(--text);
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    outline: 2px solid var(--fixed);
+}
+
+.fixed {
+    color: var(--fixed);
+    font-weight: bold;
+}
+
+.error {
+    background: var(--error) !important;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+button, a {
+    padding: 10px 16px;
+    background: var(--btn);
+    border: none;
+    border-radius: 6px;
+    color: var(--btn-text);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* ===========================
+   THEME PRESETS
+=========================== */
+
+/* LIGHT */
+.theme-light {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --grid: #94a3b8;
+    --grid-bold: #475569;
+    --cell-bg: #ffffff;
+    --text: #020617;
+    --fixed: #2563eb;
+    --error: #fecaca;
+    --btn: #2563eb;
+    --btn-text: #ffffff;
+}
+
+/* NEON */
+.theme-neon {
+    --bg: #020617;
+    --card: #020617;
+    --grid: #00ffff;
+    --grid-bold: #00ffff;
+    --cell-bg: #020617;
+    --text: #00ffff;
+    --fixed: #ff00ff;
+    --error: #ff0000;
+    --btn: #00ffff;
+    --btn-text: #020617;
+}
+
+/* PAPER */
+.theme-paper {
+    --bg: #fdf6e3;
+    --card: #ffffff;
+    --grid: #aaa;
+    --grid-bold: #555;
+    --cell-bg: #ffffff;
+    --text: #000000;
+    --fixed: #000000;
+    --error: #fca5a5;
+    --btn: #333333;
+    --btn-text: #ffffff;
+}
+/* ===========================
+   APP LAYOUT
+=========================== */
+
+.app {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER BAR */
+.header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: var(--card);
+    box-shadow: 0 4px 20px rgba(0,0,0,.4);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* CENTER GAME */
+.game-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
